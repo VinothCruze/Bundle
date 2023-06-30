@@ -1,0 +1,90 @@
+A design study is a project in which visualization researchers analyze a specific real-world problem faced by domain experts, design a visualization system that supports solving this problem, validate the design, and reflect about lessons learned in order to refine visualization design guidelines.
+
+From <https://ieeexplore.ieee.org/document/6327248> For the 
+
+
+• analysis: Design studies require analysis to translate tasks and data from domain-specific form into abstractions that a user can address through visualization.
+• real-world problem: At the heart of a design study is a contribution toward solving a real-world problem: real users and real data are mandatory.
+• design: Our definition of design is the creative process of searching through a vast space of possibilities to select one of many possible good choices from the backdrop of the far larger set of bad choices. Successful design typically requires the explicit consideration of multiple alternatives and a thorough knowledge of the space of possibilities.
+• validation: A crucial aspect of our definition is the validation of the problem analysis and the visualization design in the broad sense of Munzner’s nested model [50]. We advocate choosing from a wide variety of methods according to their suitability for evaluating the different framework stages, including justification according to known principles, qualitative analysis of results, in-formal expert feedback, and post-deployment field studies.
+• reflection: Design becomes research when reflection leads to improving the process of design itself, by confirming, refining, rejecting, or proposing guidelines.
+
+
+
+Two key persons:
+
+Visualization researchers and domain experts
+
+Three types of design study research contributions:
+	• problem characterization and abstraction - 
+		Characterizing a domain problem through an abstraction into tasks and data has multiple potential benefits.
+	•  validated visualization design:
+		 A visualization tool is a common outcome of a design study project. Our definition of design study requires that the tool must be appropriately validated with evidence that it does in fact help solve the target domain problem and is useful to the experts.
+	• reflection on the design study:
+		 its retrospective analysis in comparison to other related work.
+		
+Two Axes:  its retrospective analysis in comparison to other related work. This rough characterization is not intended to define precise boundaries, but rather for guiding the understanding of when, and when not, to use design studies for approaching certain domain problems.
+
+	• Task clarity : fuzzy and crisp definition of task. scope, stability
+	 
+	• Information Location: how much thought of visualization in the head of visualization expert vs the available actual data.
+	
+Nine stage Framework:
+• Forward jumping is a pitfall, without understanding the real problem by discussing with domain experts which creates a tool without satisfying the needs of the design expert.
+• Though its linear, we can shift forward and backward (also iterative) to refine the requirements.
+• Validation of the framework happens in the three phases, precondition,core and analysis.
+	• In precondition, validation is personal. Researcher should validate the ideas before committing it to the common area. 
+	• In core, validation is inward facing, evaluate findings and artifacts with domain experts. 
+	• In analysis, validation is outward facing, justifying the results to the outside world.
+• Precondition Phase:(learn, winnow, cast):
+◊ Learn:
+	• solid knowledge of the visualization literature, including visual encoding and interaction techniques, design guidelines, and evaluation methods.
+	• This is a guiding phase to all remaining phases.
+◊ Winnow:
+	• Selecting promising and feasible candidates for collaboration.
+	• Questions are categorized: practical, intellectual and interpersonal considerations.
+	• Does real data exist, is it enough and can I have it? This is for checking the implementation that needs to be done whether on synthetic or real data. If its synthetic, the applied algorithm will fail on real data. Before investing time check on this.
+	•  Discussing on the time that needed for the project delivery, time can be spend on their environment.
+	• Interesting research question for the visualization.
+	• Is there a real need or existing approach is enough.
+	• how a design study resulting in a tool aimed at a small group of domain experts can still lead to strong contributions. How central is the task, and to how many people?
+◊ Cast:
+	• Differentiate the person dealt with, front line analyst domain expert end user doing the actual data analysis and the person who will use new viz tool.
+	• Gatekeeper: who have power to approve or block the project
+	• Contact different people and decide who is front line and gatekeeper. So, that we can approach the correct person at correct time.
+	• Connectors to connect front line analysts to viz researcher(student)
+	• Translators are people who are very good in abstracting their domain problems into a more generic form, and relating them to larger-context domain goals.
+	• fellow tool builders: ppl who needs to enhance their viz tool that is built.
+
+	
+· Core(discover, design, implement, and deploy)
+	• Discover stage is called requirement analysis in sw engg. 
+		○ Iterative apporach of designing abstract from the domain experts and then researcher needs to update it till the end stages. It starts from discover stage and finally to write stage.
+		○ Need to understand the problems that domain experts are facing not the solution they require until the expert needs are understood. 
+		○ Acquire domain knowledge sweet spot of not knowing only little or not too much.
+	• Design is the generation and validation of data abstractions, visual encodings, and interaction mechanisms.
+		○ Should consider the broad space of possible solutions and after checking narrow down the space to appropriate approaches and should be discussed with domain experts. After discussion, filter the proposal space to select one or more.
+		○ Small consideration may converge to ok ones but miss the good ones. Generate multiple ideas in parallel and we can decide on it.
+	• Implement: follow agile way of implementing, test the code for the sprint, iterate over it and then asks for feedback and develop low code or less code solution so that it can be thrown away if it doesn’t seems to be fit. We should also consider usability engg, the solution must be not either too usable or not able to use because of complexity(either too much or too little on usability).
+	• Deploy: deploy and gather feedback about its use. Also, need to consider the deployment time. 
+		○ Check the solution is useful or not, we could use case study and evaluate them with the users, problems and data all in real.
+		○ Feedbacks and convincing validation is important
+· Analysis phase(reflect, write):
+	• Reflect: Confirm-based on new findings the current approach can be confirmed, Refine - refined or extended with new insights
+	Reject - when they don’t work as intended
+	Propose Guidelines - new guideline are proposed based on the findings
+	• Write:
+	
+	
+	
+	
+	
+	
+	
+		
+		
+	
+		
+		
+	
+
