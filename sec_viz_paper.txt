@@ -1,0 +1,61 @@
+a project in which visualization researchers analyze a specific real-world problem faced by domain experts, design a visualization system that supports solving this problem, validate the design, and reflect about lessons learned in order to refine visualization design guidelines
+
+Design study researchers design artifacts based on their understanding and interpretation of a domain problem
+
+Embracing wicked problems as core to design study has several implications.
+	•  First, wicked problems encourage input from both designers and domain experts, shaping designs into solutions that are relevant, meaningful, and interesting. The solutions are inextricably related to the problem, the design approach, and the people, including the design study researcher who is defining both problem and solution in ways that are necessarily interdependent, highly subjective, and fluid. 
+	• Second, evidence of the changing problem and solution, and their regular shaping and shifting, is an indication of a strong collaboration between design study researchers and domain experts working toward a mutually beneficial solution
+	• Third, the design of good solutions requires the consideration of a broad space of possibilities
+	
+Design study is inherently subjective:
+	Context of the design study construction: it’s the view and experiences of the domain experts, datasets, also the researcher's own intuition, interests,experiences and values. What they chose to report
+	
+	
+	
+	
+	
+	
+Researcher needs to choose methods and report persuasively, guided by the criteria and informed by the context.
+Six criteria for rigor:
+	• Informed -
+		○  designer should think of broader space,Designers draw on existing knowledge not only to directly transfer relevant techniques and methods to the problem at hand, but also to facilitate ideation on possibly new approaches.
+		○ Through careful consideration of the context of a situation against a backdrop of existing knowledge a designer shapes the design process and artifacts into new knowledge expressions that are “informed by current theory, creating an ongoing dialog between what is and what might be.”
+	• Reflexive-
+		○ Reflexivity addresses this by identifying how a researcher’s own biases and motivations shape the research process, influence participants and the observations she makes, and how the research process changes her own thinking and actions.
+		○ Reflexive notes: These first-person accounts also emphasize a self-as-instrument perspective, which can allow researchers to use their own experiences and tacit knowledge as a valid source of data to support interpretation of a situation.
+		○ Reachout to friends, collaborators and peer meetings. In short, seeking continual, critical feedback from a variety of sources can activate reflexivity throughout a design study
+
+	• Abundant - 
+		○ Abundant data that is rich in details and varied in perspectives, supports multiple meaningful interpretations that are nuanced and situated. And a design process that is shaped by many perspectives and emerges from many tested alternatives is likely to lead to better designs.
+		○ How much data would be enough? Until the point reseracher seems to be reaching saturation. No more insights being produced after adding more data, perspectives and designs.
+		○ Thick description: “the researcher’s task of both describing and interpreting observed social action (or behavior) within its particular context".
+		○ In contrast to thin description, which aims to report observations independently of intentions or context, thick description is purposefully interpretive rather than explanatory.
+		
+	• Plausible - 
+		○ Constructing and reporting plausible knowledge claims requires researchers to provide abundant and complementary evidence that is structured and presented in coherent ways.
+		○ Thick description, reflexive notes, and careful curation of design artifacts support the recording and reporting of plausible, particular knowledge claims.
+		○ Memo writing: Memos are informal analytic notes that “catch your thoughts, capture the comparisons and connections you make, and crystallize questions and directions for you to pursue”
+		○ Similarly, explicit recording of design decisions and their justifications through literate visualization supports reflection, interpretation, and analysis while also documenting the process.
+		○ The goal of crystallization is “not to provide researchers with a more valid singular truth, but to open up a more complex, in-depth, but still thoroughly partial, understanding of the issue.
+		
+	• Resonant - 
+		○ How others can use the research knowledge 
+		○ Transferability: if at the current research remains to be overlapping or contributing to the researcher or different domain field, it can be applied to that as well and then collaborate the results 
+		○ Evocative: In contrast to reports of controlled studies that aim for precision and neutrality, evocative reports in design studies and interpretive research prioritize resonance through rich, evocative, reflexive, and situated details. It is this opportunity for resonance that makes these approaches so compelling and impactful.
+	• Transparent - how transparent the decisions are to be for the end user
+		○ INFORMED: justify design decisions with respect to existing knowledge; explicate the theoretical, ontological, and epistemological stance of the research 
+		○ REFLEXIVE: disclose reflexive notes and processes 
+		○ ABUNDANT: make a rich body of data and evidence available, findable, and interpretable 
+		○ PLAUSIBLE: provide clear, open, and honest descriptions of analysis processes; release memos, design expositions, and other reflective documents; report on dead-ends and failures 
+		○ RESONANT: communicate implicit, hidden knowledge ingrained in artifacts to support transfer; use problems, datasets, designs and narrative that speak to readers
+	
+	
+We draw upon this body of work to tackle multiple interrelated aims : To be explicit about what we do in design study, why we do it, and what it allows us to know. To consider the ways in which design and research, theory and practice interrelate. To understand the relationships between the particular and the general, and ensure that we value both kinds of knowledge if we consider them to be legitimate. To help us make informed decisions about legitimacy itself. To explore philosophical positions and provide methodological foundations that can change the ways that we approach, create, assess, and use situated knowledge from design study.
+
+Two criteria for rigor
+	• An ABUNDANT approach to allow multiple voices and perspectives to shift and shape design problems and consider a broad set of solutions; 
+	• the evidence of the dynamic process is reported in TRANSPARENT ways.
+
+Four rigor criteria embrace the inherent subjectivity of design study: understanding and leveraging the role of the researcher through a REFLEXIVE design process; TRANSPARENT communication of her effects; and the development of PLAUSIBLE claims from observations and analysis that is INFORMED by appropriate epistemology.
+
+Thi
