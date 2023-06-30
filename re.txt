@@ -1,0 +1,304 @@
+CASA
+Why the dataset has multiple entries for single customers?
+Should the CASA legacy or CASA lab used because I couldnt find the data in lab as in Excel data, could able to find in legacy!? 
+al22_preisabsprachen	wzzakl22	 ccab22	varchar,	C: 2250068	31732	Price fixing
+
+What does this column mean?
+
+
+
+INVOICE:
+Why there is a extra space in the name of the column: cproipmod  
+
+PRODUCT:
+Why there is no status column available in product dataset? Hierarchy and the data isnt matching
+
+
+
+
+
+Data exploration:
+Questions to be solved:
+1). Find the frequently buying customer of different categories of product
+2). Find the frequently brought products
+3). Find the distinct products for each customer
+4). Find the count of the products that each customer buys
+5). Find the customer buying frequency of different products
+6). Find the customer who doesnt buy the different products in the time period of a month(check for 2-3 weeks then go for a month)
+7). Find and display the relationship of the products
+8). Find the customer behaviour of ordering(may be frequency, number of items)
+9). Based on the related queries, determine the optimal N value of the basket.
+10). Find the way to display the customers who doesnt have bundling purchase characteristics.
+11). Find the way to display the property hierarchy
+12). How the customer hierarchy pose the challenge of displaying bundles
+
+Columns Required:
+
+CASA:
+n_calmonth	calmonth
+s_id_customer	ccust
+s_customer_account_assignment_group	ccaccagrp
+s_customer_account_group	ccaccgrp
+s_business_area	cbusarea
+s_company_code	ccompcode
+s_customer_group	ccgrp
+s_deletion_flag_for_customer	ccdelflg
+s_document_currency	doc_currcy
+s_business_code	ccindust
+s_customer_hierarchy_level1	cchierl1
+s_customer_hierarchy_level2	cchierl2
+s_customer_hierarchy_level3	cchierl3
+s_sales_sector	ctersec
+n_customer_status	ccsta
+	
+
+
+Invoice Description:
+
+s_customer_contact_point	cccp
+s_subcategory_customer_contact_point	cccpscat
+(kundenkontaktpunkt_unterkategorie)	 
+s_sold_to(kunde)	ccsoldto
+s_zip_code(postleitzahl)	cczip
+s_customer_hierarchy_level1	cchierl1
+s_customer_hierarchy_level2	cchierl2
+s_customer_hierarchy_level3	cchierl3
+s_sales_channel_customer	ccsec
+s_division	Cterdiv
+Added columns:	
+CALMONTH','CALDAY','CCSOLDTO','CORDCLU','DORD','CORDREAS','CORDNO','CBILLNO','CBILLITM','CTERDIV','CCUST','CCHIERL1','CCHIERL2','CCHIERL3','CCHIERL4','CCSHIPTO','CORDREAS','LICTO','LIITO','QIXQUSU'
+
+/
+
+Activity Description
+
+
+	1. Product hierarchy understanding, business understanding
+	2. Formulate the problem
+	3. Start with the task
+
+Problem Framing:
+	1. Check the segment where the product bundling makes much impact
+Sales rep and branch office all users of oneplus(first phase)
+	1. Understand the business and derive what exactly should be done()
+	2. Derive the frequent itemset mining algorithm
+	3. Derive the customer's preferences based on purchasing history(recommendation algorithm)
+	4. Derive the Top N products
+	5. Decide about the pricing strategy
+	6. Plan to implement it
+
+
+Data exploration:
+Questions to be solved:
+1). Find the frequently buying customer of different categories of product
+2). Find the frequently brought products
+3). Find the distinct products for each customer
+4). Find the count of the products that each customer buys
+5). Find the customer buying frequency of different products
+6). Find the customer who doesnt buy the different products in the time period of a month(check for 2-3 weeks then go for a month)
+7). Find and display the relationship of the products
+8). Find the customer behaviour of ordering(may be frequency, number of items)
+9). Based on the related queries, determine the optimal N value of the basket.
+10). Find the way to display the customers who doesnt have bundling purchase characteristics.(collaborative filtering: determine the alike customer and suggest the products)
+11). Find the way to display the property hierarchy
+12). How the customer hierarchy pose the challenge of displaying bundles
+13). Display the products as recommendation bundle first without query input, if there is input query already then take that as input and display the products accordingly.
+14). Two models to be built one to display the recommendation using collaborative filtering initially without any input and another one to display the bundle by the output of the assocaitive rule and collaborative filtering then display the top N by the relevancy using Jaccard measure.
+15). Find the product that's often sold and one thats not often got sold.
+16). Compare the prodcuts to provide the bundle with least sold as in bundle to increase the cross selling or just stay with the products that are often bought together to increase the sales revenue
+17). Number of orders matter or number of bundle got sold is measured, i.e., how often the products that are bought in a month or just a single order of bundle that sums up to the  total revenue.
+18). Find possibility of betterment solution after implementing the apriori+collaborative+top N recommendation using Jaccard(???)
+19). Find how the recommendation algorithm already work
+20). Is it already a better choice to go with already built recommendation algorithm or to built a new one(!)
+
+Question:
+-- Product bundling should be based on the customer purchasing history and assocaitive rule to compare and get top N products or depends on the product dependency(like having the products that should go together for increasing the revenue)
+-- If he checks for mobile we could suggest charger but what if his history is on different categories of purchase even if we cluster the customer into categories of their order we will look up on the relevant customer and get matched on the different product to be get bundled(collaborative)
+-- We need the initial input from the customer to develop the bundle for example, if the purchasing history is full of furniture we cant put up the bundle with furniture without getting to know what he will order, he might go with electronics. So, we need an input from customer so that we can suggest the related products to him. AFAIK, bundles are to be suggested only after the person requests something(?)
+--Determine the cases of customer who doesnt buy bundles at all(least ordered or with same products ) and find what to suggest to them.
+-- whats the goal of this project? Whether the suggested bundle should be of less price. Like buying seperately A and B should cost more than buying it as a bundle, then only customer chooses it(?)
+-- Determine the customer behaviour===data exploration need to be done
+
+
+
+
+Top N is based on the product that he is going to search for, we determine the product that are similar to the searched item.
+
+Pricing item: The recommednation algorithm currently shows the products that are very different from the market segment of the customer, so obviously turn around rate is low for the recommendation algorithm. So, we need to display the items that are relevant based on the customer purchase history and frequent itemset.
+
+(A-ProP) Product Field (Int. Product)
+
+CPROP__CPROIPFLD(Tech name)
+05	Personal Protective Equipment
+
+(A-ProP) Product Group (Int. Product)
+0501	Occupational safety
+CPROP__CPROIPGRP(Tech name)
+
+(A-ProP) Product Class (Int. Product)
+050101	Security tapes
+CPROP__CPROIPCLA(Tech name)
+
+(A-ProP) Product Family (Int. Product)
+05010101	Warning tape, dispenser box
+CPROP__CPROIPFAM
+
+(A-ProP) Product Family (Int. Product)
+05010102	Warning tape
+CPROP__CPROIPFAM
+
+05010103	Warning tape, self-adhesive
+CPROP__CPROIPFAM
+
+Product (Price)
+0899615000	WARNTPE-DSPBOX
+CPROP
+
+0899615002	WARNTPE-RED/WHITE-W80MMXL500M
+
+0899615009	WARNTPE-RED/WHITE-BLUEANGEL-80MMX500M
+
+081244 650	WARNTPE-SA-YELLOW-BLACK
+
+081244 661	WARNTPE-SA-YELLOW-BLACK-75MMX33 M
+
+……
+
+Find the CPROP field because it has the end product of all categories
+
+Bundles must consist of products that, when packaged together, enhance or ease the overall customer experience. If you have certain items that seem like they’re glued to the shelves in your inventory, bundling them with complementary goods can be their ticket out.
+Consider a seller whose listings are mostly guitars and guitar accessories. She may have a high volume of poor-selling guitar straps and cases, along with an excess of guitar polish.
+
+To drive sales of these underperforming products, she could create a unique bundle with a popular guitar and the less-popular strap, case, and polish.
+
+On top of clearing out space in her inventory, the addition of the case, strap, and polish will add perceived value to the guitar. Buyers will be pleased to receive additional items in the bundle that they may have felt compelled to purchase separately.
+
+And, you’ll be able to attach a premium price to your bundle that could boost your profits even more than you would by selling each item individually.
+
+
+Separate customers according to the buying capacity eg: Super customer who buys the product and Casual customers have interst and sometimes buy sometimes dont and zero customer doesnt buy things that often.
+
+
+ three situations for selling a given product j.
+(1) Product p does not belong to any frequent itemset aj. 
+(2) Product p belongsto a frequent itemset aj, but frequent itemset aj is not applied as a bundle. 
+(3) Product p belongs to frequent itemset aj,and aj is selected as a bundle
+
+
+One of our main findings is that, in contrast to products typically suggested by recommender systems, the most profitable products to offer bundle discounts on appear to be those that are occasionally purchased together and often separately.
+
+
+To find the distinct products for a customer by using collectset and distinct:
+
+from pyspark.sql.window import Window
+w = Window.partitionBy('CCSOLDTO')
+distinct_prod = invoice_filt.select('CCSOLDTO', (F.collect_set('CPROIPFAM').over(w)).alias('Distinct_products'))
+distinct_prod = distinct_prod.select("CCSOLDTO","Distinct_products").distinct().show(truncate=False)
+
+To find the distinct items for a customer using groupby:
+
+distinct_prod = invoice_filt.groupBy("CCSOLDTO").agg(F.collect_set("CPROIPFAM")
+                                                      .alias("Distinct_products"))
+
+
+
+An embedding layer is a type of layer in a neural network that learns a dense representation of categorical data. In the context of recommendation systems, the user and item embeddings are learned to represent the preferences of each user and the attributes of each item, respectively, in a low-dimensional space. The latent dimension of the embedding represents the number of factors that contribute to the user-item interaction.
+The Embedding layer in Keras takes an integer input tensor of shape (batch_size, input_length) and returns a tensor of shape (batch_size, input_length, output_dim), where output_dim is the size of the embedding vector. In the case of recommendation systems, the input_length is equal to 1, as we are only dealing with one user or one item at a time.
+In the code provided, num_users and num_items are the number of unique users and items in the dataset, and latent_dim is the size of the embedding vector. Therefore, the user_embedding and item_embedding layers are initialized with the number of users and items, respectively, and the specified latent_dim. During training, the values of the embeddings are learned based on the user-item interactions in the training data. The learned embeddings can then be used to predict the user's preference for an item by computing the dot product of the user and item embeddings.
+
+
+
+Customer master(md as well lab)
+Check for medium and large in SML(add up with s2 If needed
+)
+
+
+Questions for defining the product bundling business requirements:
+	1. Have region 05 phone ,construction sites and key accounts? Sparse matrix of having the customers with products?
+	-- 
+	2. Decision on the number of products in the bundle?
+	-- start with 5 and then derive dynamically
+	3. Should the focus be on specific area i.e., Customer area/region/order reason? 
+	4. -- customer area
+	5. If any of the above should that be focused on all sectors or the one that make much revenue? 
+	6. -- metal (should consider all at final implementation)
+	7. Could we categorize the customer based on buying capacity and then suggest the number of products in the bundle? 
+	8. How should be combination of the product bundle. For example if the size is 5,3 should be already bought products and 2 should be products that aren't purchased?
+	--- ratio of products bought and not bought? If 5-> [2,3]:[1,2]
+	9. Should the products be complimenting or can be in same category?
+	-- the category can be different
+	10. Compare the prodcuts to provide the bundle with least sold as in bundle to increase the cross selling or just stay with the products that are often bought together to increase the sales revenue
+	11. The benefits of the bundling? Should the price factor be considered or only the relevant products is fine irrespective of the price?
+	12. The initial rollout will be for 1plus?
+	13. The final representation of the products(now the product model numbers will be displayed along with the user and score)
+	14. Format of the data result
+	-- final visualization of the bexcundle
+	15. Technical details for the implementation.
+
+Evaluation Protocols. To evaluate the performance of item recommendation, we adopted the leave-one-out evaluation, which has been widely used in literature [1, 14, 27]. For each user, we held-out her latest interaction as the test set and utilized the remaining data for training. Since it is too time-consuming to rank all items for every user during evaluation, we followed the common strategy [6, 21] that randomly samples 100 items that are not interacted by the user, ranking the test item among the 100 items. The performance of a ranked list is judged by Hit Ratio (HR) and Normalized Discounted Cumulative Gain (NDCG) [11]. Without special mention, we truncated the ranked list at 10 for both metrics. As such, the HR intuitively measures whether the test item is present on the top-10 list, and the NDCG accounts for the position of the hit by assigning higher scores to hits at top ranks. We calculated both metrics for each test user and reported the average score
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BDR Logic:
+• Cluster customers
+• Calculate Top products in each cluster based on a scoring logic: Revenue generated, Number of customers, number of pieces sold, etc
+• Recommend the top products to each customer excluding the ones that they have already bought
+
+
+
+Customers and distinct number of products
+Histogram distinct products
+How many customers buy in a month frequency table
+Marginal increase
+
+Empirical avg what is basket size of the invoices 
+One invoice-one product
+
+
+
+
+
+Matrix Factorization
+The idea of matrix factorization is to find two latent spaces. One is user latent space denoted by U and another is movie latent space denoted by M. Suppose the movie rating data is of dimension 600 * 9000. Then the dimension of U will be 600 * num_latent_vectors. The dimension of M will be num_latent_vectors * 9000. The number of dimensions for user latent space and movie latent space is an empirical question.
+
+
+
+Here is a high-level summary of what is happening in the code:
+1. The user and item inputs are fed into separate embedding layers to create low-dimensional representations of the users and items.
+2. For the matrix factorization (MF) path, the user and item embeddings are flattened and multiplied together to create an interaction vector.
+3. For the multi-layer perceptron (MLP) path, the user and item embeddings are concatenated and fed through a series of fully connected layers with nonlinear activations, batch normalization, and dropout.
+4. The output of the MF path and the final layer of the MLP path are concatenated to create the final NCF vector.
+5. The NCF vector is fed through a sigmoid activation function to produce a binary prediction of whether the user will interact with the item.
+Here is a more detailed breakdown of the transformations happening in each layer:
+1. Embedding layers:
+• The user input and item input are each a single integer representing the ID of the user or item.
+• The embedding layers map each integer to a low-dimensional vector representation. The number of dimensions is determined by the hyperparameters latent_dim_mf and latent_dim_mlp.
+• The output of each embedding layer is a 2D tensor with shape (batch_size, latent_dim_mf) or (batch_size, latent_dim_mlp).
+2. MF path:
+• The user and item embeddings from the MF path are flattened into 1D tensors.
+• The flattened embeddings are multiplied together element-wise to produce an interaction vector.
+• The output of the MF path is a 2D tensor with shape (batch_size, latent_dim_mf).
+3. MLP path:
+• The user and item embeddings from the MLP path are concatenated together into a single 1D tensor with shape (batch_size, latent_dim_mlp * 2).
+• The concatenated tensor is fed through a series of fully connected layers with nonlinear activations specified by the hyperparameter activation_fn.
+• The number of fully connected layers and their sizes are determined by the mlp_layer_sizes hyperparameter.
+• Each fully connected layer is followed by batch normalization, a dropout layer, and the specified nonlinear activation function.
+• The output of the MLP path is a 2D tensor with shape (batch_size, mlp_layer_sizes[-1]).
+4. Concatenation:
+• The output of the MF path and the final layer of the MLP path are concatenated together along the last dimension to produce the final NCF vector.
+• The output of the concatenation is a 2D tensor with shape (batch_size, latent_dim_mf + mlp_layer_sizes[-1]).
+5. Output layer:
+• The NCF vector is fed through a fully connected layer with a sigmoid activation function to produce a binary prediction of whether the user will interact with the item.
+• The output of the output layer is a 2D tensor with shape (batch_size, 1).
+
